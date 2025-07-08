@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Header + Section avec Bootstrap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Ton fichier CSS externe -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="custom-header d-flex align-items-center justify-content-between">
+    <!-- Logo -->
+    <div class="d-flex align-items-center">
+      <img src="logo.png" alt="Logo" width="50" height="50" class="me-2">
+      <div>
+        <div class="logo-title">Skills Center</div>
+        <div class="logo-subtext">algerietelecom</div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg p-0">
+      <div class="collapse navbar-collapse show">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+          <!-- Le logiciel -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Le logiciel
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Fonctionnalités</a></li>
+              <li><a class="dropdown-item" href="#">Versions</a></li>
+            </ul>
+          </li>
+
+          <!-- Nos clients -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nos clients
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Témoignages</a></li>
+              <li><a class="dropdown-item" href="#">Études de cas</a></li>
+            </ul>
+          </li>
+
+          <!-- Le blog -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Le blog
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Articles récents</a></li>
+              <li><a class="dropdown-item" href="#">Catégories</a></li>
+            </ul>
+          </li>
+
+          <!-- Qui sommes-nous ? -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Qui sommes-nous ?
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Notre équipe</a></li>
+              <li><a class="dropdown-item" href="#">Notre histoire</a></li>
+            </ul>
+          </li>
+
+          <!-- Nos partenaires -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+              Nos partenaires
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Entreprises</a></li>
+              <li><a class="dropdown-item" href="#">Institutions</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Actions -->
+    <div class="d-flex align-items-center">
+      <button class="btn btn-contact">Contact</button>
+      <a href="#" class="login-link"><i class="fas fa-user"></i> Connexion</a>
+    </div>
+  </header>
+
+  <!-- Section sous le header -->
+  <div class="container my-5">
+    <div class="row info-section">
+      <!-- Partie gauche (image) -->
+      <div class="col-md-6 image-side p-0">
+        <img src="image1.jfif">
+      </div>
+
+      <!-- Partie droite (texte) -->
+      <div class="col-md-6 p-4 d-flex flex-column justify-content-center">
+        <h2 class="mb-3">Bienvenue sur notre plateforme</h2>
+        <p>
+          Bienvenue aux Skills Centers d'Algérie Télécom, pôles d'excellence dédiés à l'innovation technologique. 
+              Ces espaces uniques rassemblent professionnels, chercheurs et passionnés autour des dernières avancées 
+              en télécommunications, favorisant l'apprentissage et la collaboration.
+        </p>
+        <a href="about us.html" class="btn btn-primary mt-3">Découvrir</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ... (votre code existant jusqu'à la section annonces) ... -->
+
+  <!-- Nouvelle section Annonces avec carrousel -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Nos dernières annonces</h2>
+    
+    <div id="annoncesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- Groupe 1 (visible par défaut) -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <!-- Carte 1 -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Formation 1">
+                <div class="card-body">
+                  <h5 class="card-title">Formation Management</h5>
+                  <p class="card-text">Découvrez nos formations en management adaptées à tous les niveaux.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-primary">Nouveau</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carte 2 -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Formation 2">
+                <div class="card-body">
+                  <h5 class="card-title">Atelier Digital</h5>
+                  <p class="card-text">Maîtrisez les outils digitaux essentiels pour votre entreprise.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-success">Populaire</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carte 3 -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Formation 3">
+                <div class="card-body">
+                  <h5 class="card-title">Certification IT</h5>
+                  <p class="card-text">Obtenez une certification reconnue dans le domaine des technologies.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-warning text-dark">Limité</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Groupe 2 (apparaît si 4ème annonce) -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <!-- Carte 4 -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Formation 4">
+                <div class="card-body">
+                  <h5 class="card-title">Soft Skills</h5>
+                  <p class="card-text">Développez vos compétences relationnelles et votre intelligence émotionnelle.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-info">Nouveauté</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carte 5 -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Formation 5">
+                <div class="card-body">
+                  <h5 class="card-title">Marketing Digital</h5>
+                  <p class="card-text">Stratégies avancées pour booster votre présence en ligne.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-danger">Complet</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Carte 6 -->
+            <div class="col-md-4">
+              <div class="card h-100 border-0 shadow-sm">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" class="card-img-top" alt="Formation 6">
+                <div class="card-body">
+                  <h5 class="card-title">Gestion de Projet</h5>
+                  <p class="card-text">Méthodologies agiles et traditionnelles pour managers.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <span class="badge bg-secondary">Prochainement</span>
+                    <a href="#" class="btn btn-sm btn-outline-primary">Voir détails</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Contrôles du carrousel -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#annoncesCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#annoncesCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon bg-primary rounded-circle p-3" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+  </div>
+
+<!-- ... (le reste de votre code existant) ... -->
+<!-- ... (votre code existant jusqu'à la section annonces) ... -->
+
+<!-- Section Shorts avec Auto-Play -->
+<section class="shorts-section py-5 bg-light">
+  <div class="container">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h2 class="mb-0">Shorts</h2>
+      <a href="#" class="btn btn-outline-primary btn-sm">Voir tout</a>
+    </div>
+
+    <div class="shorts-container">
+      <!-- Short 1 -->
+      <div class="short-item">
+        <div class="short-video-container">
+          <video class="short-video" playsinline muted loop preload="metadata">
+            <source src="Download.mp4" type="video/mp4">
+          </video>
+          <div class="short-overlay">
+            <span class="short-duration">0:15</span>
+            <div class="short-views">24.5k vues</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Short 2 -->
+      <div class="short-item">
+        <div class="short-video-container">
+          <video class="short-video" playsinline muted loop preload="metadata">
+            <source src="short2.mp4" type="video/mp4">
+          </video>
+          <div class="short-overlay">
+            <span class="short-duration">0:12</span>
+            <div class="short-views">18.2k vues</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Short 3 -->
+      <div class="short-item">
+        <div class="short-video-container">
+          <video class="short-video" playsinline muted loop preload="metadata">
+            <source src="short3.mp4" type="video/mp4">
+          </video>
+          <div class="short-overlay">
+            <span class="short-duration">0:18</span>
+            <div class="short-views">32.7k vues</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Short 4 -->
+      <div class="short-item">
+        <div class="short-video-container">
+          <video class="short-video" playsinline muted loop preload="metadata">
+            <source src="short4.mp4" type="video/mp4">
+          </video>
+          <div class="short-overlay">
+            <span class="short-duration">0:09</span>
+            <div class="short-views">15.3k vues</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+.shorts-section {
+  background-color: #f7f7f7;
+}
+
+.shorts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none;
+}
+
+.shorts-container::-webkit-scrollbar {
+  display: none;
+}
+
+.short-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  background: #000;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.short-item:hover {
+  transform: scale(1.02);
+}
+
+.short-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.short-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.short-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.short-duration {
+  font-weight: 500;
+}
+
+.short-views {
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .shorts-container {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const shorts = document.querySelectorAll('.short-item');
+  let currentPlaying = null;
+
+  // Optimisation pour le preload
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const video = entry.target.querySelector('video');
+      if(entry.isIntersecting) {
+        video.preload = 'auto';
+      }
+    });
+  }, { threshold: 0.1 });
+
+  shorts.forEach(short => {
+    observer.observe(short);
+    
+    const video = short.querySelector('video');
+    
+    // Auto-play au survol
+    short.addEventListener('mouseenter', function() {
+      if(currentPlaying && currentPlaying !== video) {
+        currentPlaying.pause();
+      }
+      video.currentTime = 0;
+      video.play().catch(e => console.log("Auto-play prevented:", e));
+      currentPlaying = video;
+    });
+
+    // Pause quand on quitte
+    short.addEventListener('mouseleave', function() {
+      video.pause();
+    });
+  });
+
+  // Pause tous les videos quand on scroll
+  window.addEventListener('scroll', function() {
+    if(currentPlaying) {
+      currentPlaying.pause();
+      currentPlaying = null;
+    }
+  });
+});
+</script>
+
+<!-- ... (le reste de votre code existant) ... -->
+
+<style>
+.shorts-section {
+  background-color: #f7f7f7;
+}
+
+.shorts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.shorts-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.short-item {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 9/16;
+  background: #000;
+  cursor: pointer;
+}
+
+.short-video-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.short-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.short-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px;
+  background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, transparent 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.short-duration {
+  color: white;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.short-play-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(4px);
+}
+
+.short-meta {
+  padding: 8px 0;
+}
+
+.short-views {
+  font-size: 12px;
+  color: #606060;
+}
+
+@media (min-width: 768px) {
+  .shorts-container {
+    grid-template-columns: repeat(4, minmax(180px, 1fr));
+  }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Gestion du clic sur les shorts
+  const shortItems = document.querySelectorAll('.short-item');
+  
+  shortItems.forEach(item => {
+    const video = item.querySelector('video');
+    const playBtn = item.querySelector('.short-play-btn');
+    
+    item.addEventListener('click', function() {
+      if(video.paused) {
+        video.play();
+        playBtn.innerHTML = '<i class="fas fa-pause"></i>';
+      } else {
+        video.pause();
+        playBtn.innerHTML = '<i class="fas fa-play"></i>';
+      }
+    });
+    
+    // Réinitialiser à l'icône play quand la vidéo se termine
+    video.addEventListener('ended', function() {
+      playBtn.innerHTML = '<i class="fas fa-play"></i>';
+    });
+  });
+});
+</script>
+
+<!-- ... (le reste de votre code existant) ... -->
+
+
+  <footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <!-- Colonne Logo et Copyright -->
+            
+            
+            <!-- Colonne Liens rapides -->
+            <div class="footer-nav">
+                <h4 class="footer-title">Liens rapides</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Formations</a></li>
+                    <li><a href="#">Actualités</a></li>
+                </ul>
+            </div>
+            
+            <!-- Colonne Informations légales -->
+            <div class="footer-legal">
+                <h4 class="footer-title">Informations</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Politique de confidentialité</a></li>
+                    <li><a href="#">Conditions d'utilisation</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+            
+            <!-- Colonne Contact -->
+            <div class="footer-contact">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-contact-info">
+                    <li><i class="fas fa-phone-alt"></i> +213 30 80 99 99</li>
+                    <li><i class="fas fa-envelope"></i> skillscenter@algerietelecom.dz</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Rue 08 mai 45, Sétif</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-brand">
+                
+                <div class="footer-copyright">© 2025 by Algérie Télécom Tous droits réservés.</div>
+            </div>
+        <div class="footer-bottom">
+            <div class="footer-social">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+<style>
+.site-footer {
+    background-color: #003366;
+    color: #fff;
+    padding: 3rem 0 1.5rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+}
+
+.footer-logo-img {
+    max-width: 150px;
+    height: auto;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.footer-title:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: #dc3545;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.6rem;
+}
+
+.footer-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+    padding-left: 5px;
+}
+
+.footer-contact-info {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-contact-info li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-contact-info i {
+    width: 20px;
+    text-align: center;
+}
+
+.footer-copyright {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1.2rem;
+}
+
+.footer-social a {
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+    background: #dc3545;
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .footer-brand {
+        grid-column: span 2;
+    }
+}
+</style>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
